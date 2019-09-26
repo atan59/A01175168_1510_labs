@@ -10,7 +10,7 @@ def max_decimal(base):
     :postcondition: calculate maximum decimal number
     :return: an int
     """
-    return base ** 4 - 1
+    return base ** 3
 
 
 def divide(dividend, divisor):
@@ -81,12 +81,7 @@ def base_conversion():
     quotient = divide(int(quotient), destination_base)
 
     first_digit = remainder(int(quotient), destination_base)
-    quotient = divide(int(quotient), destination_base)
 
     new_base_number = concatenate(str(first_digit), str(second_digit), str(third_digit), str(fourth_digit))
 
     print(int(new_base_number))
-
-
-if __name__ == "__main__":
-    base_conversion()

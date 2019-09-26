@@ -1,5 +1,6 @@
 """Module with functions using the random module."""
 import random
+import doctest
 
 
 def roll_die(number_of_rolls, number_of_sides):
@@ -12,6 +13,12 @@ def roll_die(number_of_rolls, number_of_sides):
     :precondition: number_of_sides must be a positive int
     :postcondition: calculate total of all the rolls
     :return: a positive int
+    >>> roll_die(0, 0)
+    0
+    >>> roll_die(-1, 2)
+    0
+    >>> roll_die(2, -1)
+    0
     """
     if number_of_rolls <= 0 or number_of_sides <= 0:
         total = 0
@@ -37,6 +44,10 @@ def create_name(length):
     :precondition: length must be a positive int
     :postcondition: Generate a random name with a specified length
     :return: a string
+    >>> create_name(0) is None
+    True
+    >>> create_name(-1) is None
+    True
     """
     if length <= 0:
         name = None
@@ -58,3 +69,11 @@ def create_name(length):
         elif length == 5:
             name = (letter_1 + letter_2 + letter_3 + letter_4 + letter_5).capitalize()
     return name
+
+
+def main():
+    doctest.testmod()
+
+
+if __name__ == "__main__":
+    main()

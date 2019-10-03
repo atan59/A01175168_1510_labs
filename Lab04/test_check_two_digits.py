@@ -35,3 +35,6 @@ class TestCheckTwoDigits(TestCase):
 
     def test_check_two_digits_ninety(self):
         self.assertEqual(check_two_digits(90), 'XC')
+
+    def test_check_two_digits_ninety_nine(self):
+        self.assertEqual(check_two_digits(99), 'XCIX')

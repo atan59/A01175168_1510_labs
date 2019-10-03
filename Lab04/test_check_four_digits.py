@@ -36,6 +36,9 @@ class TestCheckFourDigits(TestCase):
     def test_check_four_digits_ninety(self):
         self.assertEqual(check_four_digits(90), 'XC')
 
+    def test_check_four_digits_ninety_nine(self):
+        self.assertEqual(check_four_digits(99), 'XCIX')
+
     def test_check_four_digits_one_hundred(self):
         self.assertEqual(check_four_digits(100), 'C')
 
@@ -48,8 +51,14 @@ class TestCheckFourDigits(TestCase):
     def test_check_four_digits_nine_hundred(self):
         self.assertEqual(check_four_digits(900), 'CM')
 
+    def test_check_four_digits_nine_hundred_ninety_nine(self):
+        self.assertEqual(check_four_digits(999), 'CMXCIX')
+
     def test_check_four_digits_one_thousand(self):
         self.assertEqual(check_four_digits(1000), 'M')
 
     def test_check_four_digits_five_thousand(self):
         self.assertEqual(check_four_digits(5000), 'MMMMM')
+
+    def test_check_four_digits_nine_thousand_nine_hundred_ninety_nine(self):
+        self.assertEqual(check_four_digits(9999), 'MMMMMMMMMCMXCIX')

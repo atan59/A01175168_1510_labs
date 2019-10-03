@@ -36,6 +36,9 @@ class TestCheckThreeDigits(TestCase):
     def test_check_three_digits_ninety(self):
         self.assertEqual(check_three_digits(90), 'XC')
 
+    def test_check_three_digits_ninety_nine(self):
+        self.assertEqual(check_three_digits(99), 'XCIX')
+
     def test_check_three_digits_one_hundred(self):
         self.assertEqual(check_three_digits(100), 'C')
 
@@ -47,3 +50,6 @@ class TestCheckThreeDigits(TestCase):
 
     def test_check_three_digits_nine_hundred(self):
         self.assertEqual(check_three_digits(900), 'CM')
+
+    def test_check_three_digits_nine_hundred_ninety_nine(self):
+        self.assertEqual(check_three_digits(999), 'CMXCIX')

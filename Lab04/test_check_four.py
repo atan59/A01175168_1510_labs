@@ -2,7 +2,7 @@ from unittest import TestCase
 from Lab04.roman_numbers import check_four
 
 
-class TestCheck_four(TestCase):
+class TestCheckFour(TestCase):
     def test_check_four_true(self):
         self.assertTrue(check_four(4))
 

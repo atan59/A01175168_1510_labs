@@ -2,7 +2,7 @@ from unittest import TestCase
 from Lab04.roman_numbers import check_one_digit
 
 
-class TestCheck_one_digit(TestCase):
+class TestCheckOneDigit(TestCase):
     def test_check_one_digit_one(self):
         self.assertEqual(check_one_digit(1), 'I')
 

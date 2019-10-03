@@ -4,7 +4,7 @@ import io
 from Lab04.time_calculator import time_calculator
 
 
-class TestTime_calculator(TestCase):
+class TestTimeCalculator(TestCase):
     @patch("sys.stdout", new_callable=io.StringIO)
     def test_time_calculator_zero(self, mock_stdout):
         time_calculator(0)

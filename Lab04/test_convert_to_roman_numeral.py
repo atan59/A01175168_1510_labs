@@ -2,7 +2,7 @@ from unittest import TestCase
 from Lab04.roman_numbers import convert_to_roman_numeral
 
 
-class TestConvert_to_roman_numeral(TestCase):
+class TestConvertToRomanNumeral(TestCase):
     def test_convert_to_roman_numeral_one(self):
         self.assertEqual(convert_to_roman_numeral(1), 'I')
 

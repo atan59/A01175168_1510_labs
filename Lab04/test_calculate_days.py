@@ -2,7 +2,7 @@ from unittest import TestCase
 from Lab04.time_calculator import calculate_days
 
 
-class TestCalculate_days(TestCase):
+class TestCalculateDays(TestCase):
     def test_calculate_days_zero(self):
         self.assertEqual(calculate_days(0), 0)
 

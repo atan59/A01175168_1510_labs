@@ -2,7 +2,7 @@ from unittest import TestCase
 from Lab04.time_calculator import calculate_hours
 
 
-class TestCalculate_hours(TestCase):
+class TestCalculateHours(TestCase):
     def test_calculate_hours_zero(self):
         self.assertEqual(calculate_hours(0), 0)
 

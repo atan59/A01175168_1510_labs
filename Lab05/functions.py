@@ -38,7 +38,10 @@ def generate_vowel():
 
 
 def generate_consonant():
-    pass
+    consonant_list = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x',
+                      'y', 'z']
+    consonant = consonant_list[random.randint(0, len(consonant_list) - 1)]
+    return consonant
 
 
 def generate_name(syllables):

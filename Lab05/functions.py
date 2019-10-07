@@ -75,7 +75,15 @@ def create_character(name_length):
 
 
 def print_character(character):
-    pass
+    print("*~~~~~~~~~~Character Sheet~~~~~~~~~~*" + "\n" +
+          "Name: " + character[0] + "\n" +
+          "*~~~~~~~~~~~~~~~Stats~~~~~~~~~~~~~~~*" + "\n" +
+          character[1][0] + ": " + str(character[1][1]) + "\n" +
+          character[2][0] + ": " + str(character[2][1]) + "\n" +
+          character[3][0] + ": " + str(character[3][1]) + "\n" +
+          character[4][0] + ": " + str(character[4][1]) + "\n" +
+          character[5][0] + ": " + str(character[5][1]) + "\n" +
+          character[6][0] + ": " + str(character[6][1]))
 
 if __name__ = "__main__":
     doctest.testmod()

@@ -85,5 +85,10 @@ def print_character(character):
           character[5][0] + ": " + str(character[5][1]) + "\n" +
           character[6][0] + ": " + str(character[6][1]))
 
-if __name__ = "__main__":
+
+def main():
     doctest.testmod()
+
+
+if __name__ == "__main__":
+    main()

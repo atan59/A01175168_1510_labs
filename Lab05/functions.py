@@ -25,6 +25,16 @@ def roll_die(number_of_rolls, number_of_sides):
 
 
 def choose_inventory(inventory, selection):
+    """
+    Choose a certain number of items in an inventory.
+
+    :param inventory: a list
+    :param selection: a positive int
+    :precondition: inventory must be a populated list
+    :precondition: selection must be a positive int
+    :postcondition: make a list with randomly selected items from the inventory
+    :return: a list
+    """
     if (inventory == []) and (selection == 0):
         result = []
     elif selection < 0:

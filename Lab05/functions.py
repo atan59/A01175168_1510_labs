@@ -32,7 +32,9 @@ def choose_inventory(inventory, selection):
 
 
 def generate_vowel():
-    pass
+    vowel_list = ['a', 'e', 'i', 'o', 'u', 'y']
+    vowel = vowel_list[random.randint(0, len(vowel_list) - 1)]
+    return vowel
 
 
 def generate_consonant():

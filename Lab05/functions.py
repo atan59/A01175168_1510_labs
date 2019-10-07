@@ -55,6 +55,11 @@ def choose_inventory(inventory, selection):
 
 
 def generate_vowel():
+    """
+    Generate a random vowel.
+
+    :return: a string
+    """
     vowel_list = ['a', 'e', 'i', 'o', 'u', 'y']
 
     vowel = vowel_list[random.randint(0, len(vowel_list) - 1)]

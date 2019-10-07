@@ -97,6 +97,14 @@ def generate_name(syllables):
 
 
 def create_character(name_length):
+    """
+    Create a character with a name and six attributes.
+
+    :param name_length: an int
+    :precondition: name_length must be an int greater than 0
+    :postcondition: create a list with a name and six mini-lists with attributes
+    :return: a list
+    """
     if name_length < 0:
         print("This is an invalid name length.")
     else:

@@ -46,10 +46,7 @@ def choose_inventory(inventory, selection):
     elif selection == len(inventory):
         result = sorted(inventory)
     else:
-        result = []
-
-        for i in range(0, selection):
-            result.append(random.sample(inventory, selection))
+        result = random.choices(inventory, None, k=selection)
         result = sorted(result)
     return result
 
@@ -120,15 +117,19 @@ def create_character(name_length):
 
 
 def print_character(character):
-    print("*~~~~~~~~~~Character Sheet~~~~~~~~~~*" + "\n" +
-          "Name: " + character[0] + "\n" +
-          "*~~~~~~~~~~~~~~~Stats~~~~~~~~~~~~~~~*" + "\n" +
-          character[1][0] + ": " + str(character[1][1]) + "\n" +
-          character[2][0] + ": " + str(character[2][1]) + "\n" +
-          character[3][0] + ": " + str(character[3][1]) + "\n" +
-          character[4][0] + ": " + str(character[4][1]) + "\n" +
-          character[5][0] + ": " + str(character[5][1]) + "\n" +
-          character[6][0] + ": " + str(character[6][1]))
+    result = "*~~~~~~~~~~Character Sheet~~~~~~~~~~*" + "\n" + \
+             "Name: " + character[0] + "\n" + \
+             "*~~~~~~~~~~~~~~~Stats~~~~~~~~~~~~~~~*" + "\n"
+
+    for i in range(1, 7):
+        result += character[i][0] + ": " + str(character[i][1]) + "\n"
+
+    if len(character) == 8:
+        result += "*~~~~~~~~~~Inventory~~~~~~~~~~*" + "\n"
+        print(character[7])
+        for i in range(0, len(character[7])):
+            result += str(i+1) + ". " + character[7][i] + "\n"
+    print(result)
 
 
 def main():

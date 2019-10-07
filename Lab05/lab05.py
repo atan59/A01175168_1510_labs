@@ -117,6 +117,13 @@ def create_character(name_length):
 
 
 def print_character(character):
+    """
+    Print character information.
+
+    :param character: a list
+    :precondition: character must be a populated list
+    :postcondition: print character information
+    """
     result = "*~~~~~~~~~~Character Sheet~~~~~~~~~~*" + "\n" + \
              "Name: " + character[0] + "\n" + \
              "*~~~~~~~~~~~~~~~Stats~~~~~~~~~~~~~~~*" + "\n"

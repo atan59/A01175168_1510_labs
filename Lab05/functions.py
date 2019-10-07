@@ -45,7 +45,11 @@ def generate_consonant():
 
 
 def generate_name(syllables):
-    pass
+    name = ''
+    for i in range(0, syllables):
+        syllable = generate_consonant() + generate_vowel()
+        name += syllable
+    return name.capitalize()
 
 
 def create_character(name_length):

@@ -80,6 +80,14 @@ def generate_consonant():
 
 
 def generate_name(syllables):
+    """
+    Generate a name with a certain number of syllables.
+
+    :param syllables: an int
+    :precondition: must be a positive int
+    :postcondition: Generate a name with a certain number of syllables.
+    :return: a string
+    """
     name = ''
 
     for i in range(0, syllables):

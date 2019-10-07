@@ -4,6 +4,16 @@ import doctest
 
 
 def roll_die(number_of_rolls, number_of_sides):
+    """
+    Roll a die with a specific number of sides a certain number of times.
+
+    :param number_of_rolls: a positive int
+    :param number_of_sides: a positive int
+    :precondition: number_of_rolls must be an int greater than 0
+    :precondition: number_of_sides must be an int greater than 0
+    :postcondition: calculate total number after a certain number of rolls.
+    :return: an int
+    """
     if (number_of_rolls <= 0) or (number_of_sides <= 0):
         total = 0
     else:
@@ -30,7 +40,6 @@ def choose_inventory(inventory, selection):
 
         for i in range(0, selection):
             result.append(random.sample(inventory, selection))
-
         result = sorted(result)
     return result
 

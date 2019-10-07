@@ -123,19 +123,52 @@ def print_character(character):
     :param character: a list
     :precondition: character must be a populated list
     :postcondition: print character information
+    >>> print_character(["Name", ['Strength', 3], ['Dexterity', 4], ['Constitution', 5], ['Intelligence', 6], \
+    ['Wisdom', 7], ['Charisma', 8]])
+    *~~~~~~~~~~Character Sheet~~~~~~~~~~*
+    Name: Name
+    *~~~~~~~~~~~~~~~Stats~~~~~~~~~~~~~~~*
+    Strength: 3
+    Dexterity: 4
+    Constitution: 5
+    Intelligence: 6
+    Wisdom: 7
+    Charisma: 8
+    >>> print_character(["Name", ['Strength', 3], ['Dexterity', 4], ['Constitution', 5], ['Intelligence', 6], \
+    ['Wisdom', 7], ['Charisma', 8],['Shield', 'Sword']])
+    *~~~~~~~~~~Character Sheet~~~~~~~~~~*
+    Name: Name
+    *~~~~~~~~~~~~~~~Stats~~~~~~~~~~~~~~~*
+    Strength: 3
+    Dexterity: 4
+    Constitution: 5
+    Intelligence: 6
+    Wisdom: 7
+    Charisma: 8
+    *~~~~~~~~~~Inventory~~~~~~~~~~*
+    1. Shield
+    2. Sword
     """
     result = "*~~~~~~~~~~Character Sheet~~~~~~~~~~*" + "\n" + \
              "Name: " + character[0] + "\n" + \
              "*~~~~~~~~~~~~~~~Stats~~~~~~~~~~~~~~~*" + "\n"
 
     for i in range(1, 7):
-        result += character[i][0] + ": " + str(character[i][1]) + "\n"
+        if len(character) == 8:
+            result += character[i][0] + ": " + str(character[i][1]) + "\n"
+        else:
+            if i == 6:
+                result += character[i][0] + ": " + str(character[i][1])
+            else:
+                result += character[i][0] + ": " + str(character[i][1]) + "\n"
 
     if len(character) == 8:
         result += "*~~~~~~~~~~Inventory~~~~~~~~~~*" + "\n"
-        print(character[7])
         for i in range(0, len(character[7])):
-            result += str(i+1) + ". " + character[7][i] + "\n"
+            if i == len(character[7]) - 1:
+                result += str(i + 1) + ". " + character[7][i]
+            else:
+                result += str(i + 1) + ". " + character[7][i] + "\n"
     print(result)
 
 

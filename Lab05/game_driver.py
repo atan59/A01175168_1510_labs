@@ -31,31 +31,41 @@ def main():
           "Call the function: choose_inventory([\'Sword\', \'Shield\', \'Bow\'], " + number_of_items + ")" + "\n" +
           "Output: " + inventory_choices + "\n" +
           "This means you have chosen the " + number_of_items + " items listed above from the inventory.")
-    
+
     # Demo generate_vowel
-    vowel = Lab05.lab05.generate_vowel()
     print("\n*~~~~~~~~~~~Generating a Random Vowel~~~~~~~~~~~*")
+
+    vowel = Lab05.lab05.generate_vowel()
+
     print("\nHere's the \'generate_vowel\' function:" + "\n" +
-          "For example, you want to generate a vowel." + "\n" +
+          "You want to generate a vowel." + "\n" +
           "Call the function: generate_vowel()" + "\n" +
           "Output: " + vowel + "\n" +
           "This means you have generated " + vowel + ".")
+
     # Demo generate_consonant
-    consonant = Lab05.lab05.generate_consonant()
     print("\n*~~~~~~~~~Generating a Random Consonant~~~~~~~~~*")
+
+    consonant = Lab05.lab05.generate_consonant()
+
     print("\nHere's the \'generate_consonant\' function:" + "\n" +
-          "For example, you want to generate a vowel." + "\n" +
+          "You want to generate a vowel." + "\n" +
           "Call the function: generate_consonant()" + "\n" +
           "Output: " + consonant + "\n" +
           "This means you have generated " + consonant + ".")
+
     # Demo generate_name
-    name = Lab05.lab05.generate_name(3)
     print("\n*~~~~~~~~~~~Generating a Random Name~~~~~~~~~~~*")
+
+    name_length = input("Input how many syllables do you want in your name: ")
+    name = Lab05.lab05.generate_name(int(name_length))
+
     print("\nHere's the \'generate_name\' function:" + "\n" +
-          "For example, you want to generate a name with three syllables." + "\n" +
-          "Call the function: generate_name(3)" + "\n" +
+          "You want to generate a name with " + name_length + " syllables." + "\n" +
+          "Call the function: generate_name(" + name_length + ")" + "\n" +
           "Output: " + name + "\n" +
           "This means you have generated " + name + ".")
+    
     # Demo create_character
     character = Lab05.lab05.create_character(3)
     print("\n*~~~~~~~~~~~Creating a Character~~~~~~~~~~~*")

@@ -57,23 +57,27 @@ def main():
     # Demo generate_name
     print("\n*~~~~~~~~~~~Generating a Random Name~~~~~~~~~~~*")
 
-    name_length = input("Input how many syllables do you want in your name: ")
-    name = Lab05.lab05.generate_name(int(name_length))
+    syllable = input("Input how many syllables do you want in your name: ")
+    name = Lab05.lab05.generate_name(int(syllable))
 
     print("\nHere's the \'generate_name\' function:" + "\n" +
-          "You want to generate a name with " + name_length + " syllables." + "\n" +
-          "Call the function: generate_name(" + name_length + ")" + "\n" +
+          "You want to generate a name with " + syllable + " syllables." + "\n" +
+          "Call the function: generate_name(" + syllable + ")" + "\n" +
           "Output: " + name + "\n" +
           "This means you have generated " + name + ".")
-    
+
     # Demo create_character
-    character = Lab05.lab05.create_character(3)
     print("\n*~~~~~~~~~~~Creating a Character~~~~~~~~~~~*")
+
+    name_length = input("Input how long you want your name to be: ")
+    character = Lab05.lab05.create_character(int(name_length))
+
     print("\nHere's the \'create_character\' function:" + "\n" +
-          "For example, you want to create a character with a name with three syllables." + "\n" +
-          "Call the function: create_character(3)" + "\n" +
+          "For example, you want to create a character with a name with " + name_length + " syllables." + "\n" +
+          "Call the function: create_character(" + name_length + ")" + "\n" +
           "Output: " + str(character) + "\n" +
           "This means you have created a character with the name and attributes listed above.")
+    
     # Demo print_character
     print("\n*~~~~~~~~~~~Printing Character Information~~~~~~~~~~~*")
     print("\nHere's the \'print_character\' function:" + "\n" +

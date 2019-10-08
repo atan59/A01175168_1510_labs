@@ -8,7 +8,7 @@ def main():
 
     # Demo roll_dice
     print("\n*~~~~~~~~~~~~~~Rolling a Die~~~~~~~~~~~~~~*")
-    
+
     number_of_rolls = input("Input times you will roll: ")
     number_of_sides = input("Input number of sides on die: ")
     die_rolls = str(Lab05.lab05.roll_die(int(number_of_rolls), int(number_of_sides)))
@@ -21,13 +21,17 @@ def main():
           " times is equal to " + die_rolls + ".")
 
     # Demo choose_inventory
-    inventory_choices = str(Lab05.lab05.choose_inventory(['Sword', 'Shield', 'Bow'], 2))
     print("\n*~~~~~~~Choosing Items From an Inventory~~~~~~~*")
+
+    number_of_items = input("Input number of items you want: ")
+    inventory_choices = str(Lab05.lab05.choose_inventory(['Sword', 'Shield', 'Bow'], int(number_of_items)))
+
     print("\nHere's the \'choose_inventory\' function:" + "\n" +
-          "For example, you want to select two items from a list with a sword, a shield, and a bow." + "\n" +
-          "Call the function: choose_inventory([\'Sword\', \'Shield\', \'Bow\'], 2)" + "\n" +
+          "You want to select " + number_of_items + " items from a list with a sword, a shield, and a bow." + "\n" +
+          "Call the function: choose_inventory([\'Sword\', \'Shield\', \'Bow\'], " + number_of_items + ")" + "\n" +
           "Output: " + inventory_choices + "\n" +
-          "This means you have chosen the two items listed above from the inventory.")
+          "This means you have chosen the " + number_of_items + " items listed above from the inventory.")
+    
     # Demo generate_vowel
     vowel = Lab05.lab05.generate_vowel()
     print("\n*~~~~~~~~~~~Generating a Random Vowel~~~~~~~~~~~*")

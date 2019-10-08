@@ -5,15 +5,21 @@ import Lab05.lab05
 def main():
     # Welcome message
     print("*~~~~~~~~~~Welcome to the Demo!~~~~~~~~~~*")
+
     # Demo roll_dice
-    die_rolls = str(Lab05.lab05.roll_die(3, 6))
     print("\n*~~~~~~~~~~~~~~Rolling a Die~~~~~~~~~~~~~~*")
+    
+    number_of_rolls = input("Input times you will roll: ")
+    number_of_sides = input("Input number of sides on die: ")
+    die_rolls = str(Lab05.lab05.roll_die(int(number_of_rolls), int(number_of_sides)))
+
     print("\nHere's the \'roll_die\' function:" + "\n" +
-          "For example, you want to roll a six-sided die three times." + "\n" +
-          "Call the function: roll_die(3, 6)" + "\n" +
+          "You want to roll a " + number_of_rolls + "-sided die " + number_of_sides + " times." + "\n" +
+          "Call the function: roll_die(" + number_of_rolls + ", " + number_of_sides + ")" + "\n" +
           "Output: " + die_rolls + "\n" +
-          "This means that the total number after rolling a six-sided die three times is equal to " +
-          die_rolls + ".")
+          "This means that the total number after rolling a " + number_of_sides + "-sided die " + number_of_rolls +
+          " times is equal to " + die_rolls + ".")
+
     # Demo choose_inventory
     inventory_choices = str(Lab05.lab05.choose_inventory(['Sword', 'Shield', 'Bow'], 2))
     print("\n*~~~~~~~Choosing Items From an Inventory~~~~~~~*")

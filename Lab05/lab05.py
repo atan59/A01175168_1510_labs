@@ -37,6 +37,8 @@ def choose_inventory(inventory, selection):
     """
     if (inventory == []) and (selection == 0):
         result = []
+    elif (inventory != []) and (selection == 0):
+        result = []
     elif selection < 0:
         print("You can't make a negative selection!")
         result = []

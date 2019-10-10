@@ -121,7 +121,7 @@ def create_character(name_length):
         for i in range(0, 6):
             attribute = [attribute_names[i], roll_die(3, 6)]
             character_stats.append(attribute)
-    return character_stats
+        return character_stats
 
 
 def print_character(character):

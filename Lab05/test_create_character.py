@@ -4,7 +4,7 @@ import io
 from Lab05.lab05 import create_character
 
 
-class TestCreate_character(TestCase):
+class TestCreateCharacter(TestCase):
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_create_character_negative(self, mock_stdout):
         create_character(-1)

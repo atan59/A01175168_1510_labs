@@ -3,7 +3,7 @@ from unittest.mock import patch
 from Lab05.lab05 import choose_inventory
 
 
-class test_choose_inventory(TestCase):
+class TestChooseInventory(TestCase):
     @patch('random.choices', return_value=['Sword'])
     def test_choose_inventory_empty_list_selection_zero(self, mock_choices):
         actual = choose_inventory([], 0)

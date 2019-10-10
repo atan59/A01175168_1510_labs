@@ -84,7 +84,7 @@ def main():
           "You want to print out the information about the character you created above." + "\n" +
           "Call the function: print_character(character)" + "\n" +
           "Output: " + "\n")
-    
+
     Lab05.lab05.print_character(character)
     print("\nThis prints out the character information.")
 

@@ -28,7 +28,7 @@ class TestChooseInventory(TestCase):
     def test_choose_inventory_selection_greater_than_list_length_stdout(self, mock_stdout):
         choose_inventory(['Sword', 'Shield', "Bow"], 4)
         actual = mock_stdout.getvalue()
-        expected = "Your selection is greater than the amount of items in the inventory."
+        expected = "Your selection is greater than the amount of items in the inventory.\n"
         self.assertEqual(expected, actual)
 
     @patch('random.choices', return_value=['Sword'])

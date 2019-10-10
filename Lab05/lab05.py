@@ -131,6 +131,7 @@ def print_character(character):
     :param character: a list
     :precondition: character must be a populated list
     :postcondition: print character information
+    
     >>> print_character(["Name", ['Strength', 3], ['Dexterity', 4], ['Constitution', 5], ['Intelligence', 6], \
     ['Wisdom', 7], ['Charisma', 8]])
     *~~~~~~~~~~Character Sheet~~~~~~~~~~*

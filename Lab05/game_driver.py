@@ -77,16 +77,36 @@ def main():
           "Call the function: create_character(" + name_length + ")" + "\n" +
           "Output: " + str(character) + "\n" +
           "This means you have created a character with the name and attributes listed above.")
-    
+
     # Demo print_character
     print("\n*~~~~~~~~~~~Printing Character Information~~~~~~~~~~~*")
     print("\nHere's the \'print_character\' function:" + "\n" +
-          "For example, you want to print out the information about the character we created above." + "\n" +
+          "You want to print out the information about the character you created above." + "\n" +
           "Call the function: print_character(character)" + "\n" +
           "Output: " + "\n")
+    
     Lab05.lab05.print_character(character)
     print("\nThis prints out the character information.")
+
     # Bonus
+    print("\n*~~~~~~~~Printing Character Information After a Purchase~~~~~~~~*")
+
+    print("\nLet's say you make a purchase with as your character.")
+
+    shop = ['Sword', 'Shield', 'Bow', 'Staff', 'Dagger', 'Slingshot']
+    print("\nHere's the available items: " + str(shop))
+
+    number_of_purchases = input("\nInput amount of items you want to buy: ")
+
+    purchased_items = Lab05.lab05.choose_inventory(shop, int(number_of_purchases))
+    character.append(purchased_items)
+    print("\nHere's what you purchased: " + str(purchased_items))
+
+    print("\nYou can see the items in your inventory by using the print_character function.")
+
+    Lab05.lab05.print_character(character)
+
+    print("\nAs you can see, you can see your inventory items in your character information.")
 
 
 if __name__ == "__main__":

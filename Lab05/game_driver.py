@@ -4,7 +4,7 @@ import Lab05.lab05
 
 def main():
     """
-    Run a demo of the functions.
+    Run a demo of the functions in lab05.py.
     """
     # Welcome message
     print("*~~~~~~~~~~Welcome to the Demo!~~~~~~~~~~*")

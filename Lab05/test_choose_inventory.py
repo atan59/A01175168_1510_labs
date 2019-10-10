@@ -11,6 +11,12 @@ class TestChooseInventory(TestCase):
         expected = []
         self.assertEqual(expected, actual)
 
+    @patch('random.choices', return_value=[])
+    def test_choose_inventory_selection_zero(self, mock_choices):
+        actual = choose_inventory(['Sword', 'Shield', 'Bow'], 0)
+        expected = []
+        self.assertEqual(expected, actual)
+
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_choose_inventory_selection_negative_stdout(self, mock_stdout):
         choose_inventory(['Sword', 'Shield', "Bow"], -1)

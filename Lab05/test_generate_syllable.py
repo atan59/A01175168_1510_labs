@@ -4,20 +4,26 @@ from Lab05.lab05 import generate_syllable
 
 
 class TestGenerateSyllable(TestCase):
-    @patch('random.randint', return_value=0)
-    def test_generate_vowel_min(self, mock_randint):
+    @patch('random.randint', side_effect=[0, 0])
+    def test_generate_syllable_min_consonant_and_vowel(self, mock_randint):
         actual = generate_syllable()
         expected = 'ba'
         self.assertEqual(expected, actual)
 
-    @patch('random.randint', return_value=3)
-    def test_generate_vowel_mid(self, mock_randint):
+    @patch('random.randint', side_effect=[10, 3])
+    def test_generate_syllable_mid_consonant_and_vowel(self, mock_randint):
         actual = generate_syllable()
-        expected = 'fo'
+        expected = 'no'
         self.assertEqual(expected, actual)
 
-    @patch('random.randint', return_value=5)
-    def test_generate_vowel_max(self, mock_randint):
+    @patch('random.randint', side_effect=[20, 5])
+    def test_generate_syllable_max_consonant_and_vowel(self, mock_randint):
         actual = generate_syllable()
-        expected = 'hy'
+        expected = 'zy'
+        self.assertEqual(expected, actual)
+
+    @patch('random.randint', side_effect=[1, 1])
+    def test_generate_syllable_positive_consonant_and_vowel(self, mock_randint):
+        actual = generate_syllable()
+        expected = 'ce'
         self.assertEqual(expected, actual)

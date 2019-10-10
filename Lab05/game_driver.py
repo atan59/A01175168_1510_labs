@@ -12,7 +12,7 @@ def main():
     # Demo roll_dice
     print("\n*~~~~~~~~~~~~~~Rolling a Die~~~~~~~~~~~~~~*")
 
-    number_of_rolls = input("Input times you will roll: ")
+    number_of_rolls = input("Input number times you will roll: ")
     number_of_sides = input("Input number of sides on die: ")
     die_rolls = str(Lab05.lab05.roll_die(int(number_of_rolls), int(number_of_sides)))
 
@@ -24,16 +24,29 @@ def main():
           " times is equal to " + die_rolls + ".")
 
     # Demo choose_inventory
-    print("\n*~~~~~~~Choosing Items From an Inventory~~~~~~~*")
+    print("\n*~~~~~~~Choosing Items/Buying From an Inventory~~~~~~~*")
 
-    number_of_items = input("Input number of items you want: ")
+    number_of_items = input("Input number of items you want to buy: ")
     inventory_choices = str(Lab05.lab05.choose_inventory(['Sword', 'Shield', 'Bow'], int(number_of_items)))
 
-    print("\nHere's the \'choose_inventory\' function:" + "\n" +
-          "You want to select " + number_of_items + " items from a list with a sword, a shield, and a bow." + "\n" +
-          "Call the function: choose_inventory([\'Sword\', \'Shield\', \'Bow\'], " + number_of_items + ")" + "\n" +
-          "Output: " + inventory_choices + "\n" +
-          "This means you have chosen the " + number_of_items + " items listed above from the inventory.")
+    if 0 < int(number_of_items) < len(['Sword', 'Shield', 'Bow']):
+        print("\nHere's the \'choose_inventory\' function:" + "\n" +
+              "You want to select " + number_of_items + " items from a list with a sword, a shield, and a bow." + "\n" +
+              "Call the function: choose_inventory([\'Sword\', \'Shield\', \'Bow\'], " + number_of_items + ")" + "\n" +
+              "Output: " + inventory_choices + "\n" +
+              "This means you bought " + number_of_items + " of items listed above from the inventory.")
+    elif int(number_of_items) < 0:
+        print("Here's the \'choose_inventory\' function:" + "\n" +
+              "You want to select " + number_of_items + " items from a list with a sword, a shield, and a bow." + "\n" +
+              "Call the function: choose_inventory([\'Sword\', \'Shield\', \'Bow\'], " + number_of_items + ")" + "\n" +
+              "Output: " + inventory_choices + "\n" +
+              "Your selection is negative so you get an empty list.")
+    else:
+        print("Here's the \'choose_inventory\' function:" + "\n" +
+              "You want to select " + number_of_items + " items from a list with a sword, a shield, and a bow." + "\n" +
+              "Call the function: choose_inventory([\'Sword\', \'Shield\', \'Bow\'], " + number_of_items + ")" + "\n" +
+              "Output: " + inventory_choices + "\n" +
+              "Your selection exceeds the number of items available so you get a sorted version of the inventory list.")
 
     # Demo generate_vowel
     print("\n*~~~~~~~~~~~Generating a Random Vowel~~~~~~~~~~~*")
@@ -72,11 +85,11 @@ def main():
     # Demo create_character
     print("\n*~~~~~~~~~~~Creating a Character~~~~~~~~~~~*")
 
-    name_length = input("Input how long you want your name to be: ")
+    name_length = input("Input how many syllables you want your name to have: ")
     character = Lab05.lab05.create_character(int(name_length))
 
     print("\nHere's the \'create_character\' function:" + "\n" +
-          "For example, you want to create a character with a name with " + name_length + " syllables." + "\n" +
+          "You want to create a character with a name with " + name_length + " syllables." + "\n" +
           "Call the function: create_character(" + name_length + ")" + "\n" +
           "Output: " + str(character) + "\n" +
           "This means you have created a character with the name and attributes listed above.")
@@ -94,7 +107,7 @@ def main():
     # Bonus
     print("\n*~~~~~~~~Printing Character Information After a Purchase~~~~~~~~*")
 
-    print("\nLet's say you make a purchase with as your character.")
+    print("\nLet's say you make a purchase with your character.")
 
     shop = ['Sword', 'Shield', 'Bow', 'Staff', 'Dagger', 'Slingshot']
     print("\nHere's the available items: " + str(shop))
@@ -105,11 +118,11 @@ def main():
     character.append(purchased_items)
     print("\nHere's what you purchased: " + str(purchased_items))
 
-    print("\nYou can see the items in your inventory by using the print_character function.")
+    print("\nYou can see the items in your inventory by using the \"print_character\" function.")
 
     Lab05.lab05.print_character(character)
 
-    print("\nAs you can see, you can see your inventory items in your character information.")
+    print("\nHere you can see your inventory items in your character information.")
 
 
 if __name__ == "__main__":

@@ -3,7 +3,7 @@ from unittest.mock import patch
 from Lab05.lab05 import roll_die
 
 
-class TestRoll_die(TestCase):
+class test_roll_die(TestCase):
     @patch('random.randint', return_value=1)
     def test_roll_die_negative_rolls(self, mock_randint):
         actual = roll_die(-1, 6)

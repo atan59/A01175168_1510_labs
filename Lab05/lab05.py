@@ -76,6 +76,15 @@ def generate_consonant():
     return consonant
 
 
+def generate_syllable():
+    """
+    Generate a random syllable.
+
+    :return: a string
+    """
+    return generate_consonant() + generate_vowel()
+
+
 def generate_name(syllables):
     """
     Generate a name with a certain number of syllables.
@@ -88,8 +97,7 @@ def generate_name(syllables):
     name = ''
 
     for i in range(0, syllables):
-        syllable = generate_consonant() + generate_vowel()
-        name += syllable
+        name += generate_syllable()
     return name.capitalize()
 
 

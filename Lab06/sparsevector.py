@@ -23,8 +23,12 @@ def sparse_add(sparse_vector_1, sparse_vector_2):
     :postcondition: calculate the sum of the values of the two sparse vector dictionaries
     :return: a dictionary
 
+    >>> sparse_add({}, {})
+    {}
     >>> sparse_add({0: 1, 3: 5, 4: 2}, {0: 2, 3: 4, 4: 5})
     {0: 3, 3: 9, 4: 7}
+    >>> sparse_add({0: -1, 1: 1, 2: 1}, {0: 1, 1: 1, 3: 1})
+    {1: 2, 2: 1, 3: 1}
     """
     sparse_vector_sum = {}
 

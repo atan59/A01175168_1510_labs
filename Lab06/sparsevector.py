@@ -1,4 +1,14 @@
-"""Calculate the sum of two vectors."""
+"""Calculate the sum of two vectors.
+
+Q6.
+You would not be able to return the length of the vector because we have not included the zero values in the dictionary.
+This means that there could be trailing zero values that we don't know about. If we use the len() function on the
+current dictionary, it would just return the length of the vector with only non-zero values.
+
+I would ask the team lead to clarify whether they want the length of the vector with or without the zero values. If they
+want it with the zero values, I would also ask if they want to include the leading and trailing zero values in the
+length or if they just want to include the zeros in between the non-zero values.
+"""
 import doctest
 
 

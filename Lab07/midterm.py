@@ -1,4 +1,6 @@
 """Implementation of solutions for the six coding questions from the midterm."""
+import random
+import doctest
 
 
 def list_tagger(batch):
@@ -93,3 +95,47 @@ def multiples_of_3(upper_bound):
 
     return sum_of_multiples
 
+
+def create_tally(num_of_sides):
+    tally = {}
+    for i in range(1, num_of_sides + 1):
+        tally[i] = 0
+
+    return tally
+
+
+def roll_die(num_of_sides):
+    return random.randint(1, num_of_sides)
+
+
+def tally_roll(roll_result, tally):
+    tally[roll_result] += 1
+
+
+def simulate_rolls(num_of_sides, num_of_rolls, tally):
+    times_rolled = 0
+    while times_rolled < num_of_rolls:
+        roll_result = roll_die(num_of_sides)
+        tally_roll(roll_result, tally)
+        times_rolled += 1
+
+
+def print_tally(tally):
+    for key, value in tally:
+        print("You rolled " + str(key) + " " + str(value) + " times.")
+
+
+def main():
+    num_of_sides = int(input("How many sides are on the die?: "))
+    num_of_rolls = int(input("How many die rolls?: "))
+
+    tally = create_tally(num_of_sides)
+
+    simulate_rolls(num_of_sides, num_of_rolls, tally)
+    print_tally(tally)
+
+    doctest.testmod()
+
+
+if __name__ == "__main__":
+    main()

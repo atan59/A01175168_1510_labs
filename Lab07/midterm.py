@@ -19,3 +19,22 @@ def list_tagger(batch):
     result.insert(0, len(batch))
 
     return result
+
+
+def cutoff(int_list, num):
+    """
+    Count the amount of values in a list that are multiples of a certain number.
+
+    :param int_list: a list
+    :param num: an int
+    :precondition: num must be a positive int
+    :postcondition: count number of values in int_list that are multiples of num
+    :return: an int
+    """
+    count = 0
+    for i in int_list:
+        if i % num == 0:
+            count += 1
+
+    return count
+

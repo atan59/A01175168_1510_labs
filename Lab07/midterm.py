@@ -27,6 +27,7 @@ def cutoff(int_list, num):
 
     :param int_list: a list
     :param num: an int
+    :precondition: int_list must be a list of integers
     :precondition: num must be a positive int
     :postcondition: count number of values in int_list that are multiples of num
     :return: an int
@@ -37,4 +38,18 @@ def cutoff(int_list, num):
             count += 1
 
     return count
+
+
+def prepender(string_list, prefix):
+    """
+    Add prefix to all strings in a list.
+
+    :param string_list: a list
+    :param prefix: a string
+    :precondition: string_list must be a list of strings
+    :precondition: prefix must be a string
+    :postcondition: add prefix to all strings in a list
+    """
+    for i in range(0, len(string_list)):
+        string_list[i] = prefix + string_list[i]
 

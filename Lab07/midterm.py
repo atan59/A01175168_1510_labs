@@ -33,6 +33,11 @@ def cutoff(int_list, num):
     :precondition: num must be a positive int
     :postcondition: count number of values in int_list that are multiples of num
     :return: an int
+
+    >>> cutoff([], 4)
+    0
+    >>> cutoff([1, 2, 3, 4], 2)
+    2
     """
     count = 0
     for i in int_list:
@@ -86,6 +91,13 @@ def multiples_of_3(upper_bound):
     :precondition: upper_bound must be a positive int greater than 1
     :postcondition: calculate the sum of the multiples of 3 in a range from 1 to upper_bound
     :return: an int
+
+    >>> multiples_of_3(3)
+    0
+    >>> multiples_of_3(4)
+    3
+    >>> multiples_of_3(7)
+    9
     """
     positive_integers = range(1, upper_bound)
     sum_of_multiples = 0
@@ -97,6 +109,19 @@ def multiples_of_3(upper_bound):
 
 
 def create_tally(num_of_sides):
+    """
+    Create a dictionary to tally die rolls.
+
+    :param num_of_sides: an int
+    :precondition: num_of_sides must be a positive int
+    :postcondition: create a dictionary with entries for each side of the die
+    :return: a dictionary
+
+    >>> create_tally(0)
+    {}
+    >>> create_tally(2)
+    {1: 0, 2: 0}
+    """
     tally = {}
     for i in range(1, num_of_sides + 1):
         tally[i] = 0
@@ -105,14 +130,42 @@ def create_tally(num_of_sides):
 
 
 def roll_die(num_of_sides):
+    """
+    Simulate rolling a die.
+
+    :param num_of_sides: an int
+    :precondition: num_of_sides must be a positive int greater than 0
+    :postcondition: roll a die with the specified number of sides
+    :return: an int
+    """
     return random.randint(1, num_of_sides)
 
 
 def tally_roll(roll_result, tally):
+    """
+    Modify tally dictionary to increment based on roll_result.
+
+    :param roll_result: an int
+    :param tally: a dictionary
+    :precondition: roll_result must be an int greater than 0
+    :precondition: tally must be a populated dictionary
+    :postcondition: add 1 to the dictionary key: value pair where the key is the roll_result
+    """
     tally[roll_result] += 1
 
 
 def simulate_rolls(num_of_sides, num_of_rolls, tally):
+    """
+    Simulate rolling a die a certain amount of times.
+
+    :param num_of_sides: an int
+    :param num_of_rolls: an int
+    :param tally: a dictionary
+    :precondition: num_of_sides must be an int greater than 0
+    :precondition: num_of_rolls must be an int greater than 0
+    :precondition: tally must be a populated dictionary
+    :postcondition: roll die the specified number of times and tally each roll in the dictionary
+    """
     times_rolled = 0
     while times_rolled < num_of_rolls:
         roll_result = roll_die(num_of_sides)
@@ -121,11 +174,21 @@ def simulate_rolls(num_of_sides, num_of_rolls, tally):
 
 
 def print_tally(tally):
+    """
+    Print the tally.
+
+    :param tally: a dictionary
+    :precondition: tally must be a populated dictionary
+    :postcondition: print string describing the tally
+    """
     for key, value in tally:
         print("You rolled " + str(key) + " " + str(value) + " times.")
 
 
 def main():
+    """
+    Run program for rolling a die.
+    """
     num_of_sides = int(input("How many sides are on the die?: "))
     num_of_rolls = int(input("How many die rolls?: "))
 

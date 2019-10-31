@@ -40,7 +40,9 @@ def cutoff(int_list, num):
     """
     count = 0
     for i in int_list:
-        if i % num == 0:
+        if i == 0 or num == 0:
+            pass
+        elif i % num == 0:
             count += 1
 
     return count

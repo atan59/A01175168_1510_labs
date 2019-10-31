@@ -17,10 +17,9 @@ def list_tagger(batch):
     >>> list_tagger([1, 2, 3])
     [3, 1, 2, 3]
     """
-    result = []
-    result.insert(0, len(batch))
+    batch.insert(0, len(batch))
 
-    return result
+    return batch
 
 
 def cutoff(int_list, num):

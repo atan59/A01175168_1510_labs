@@ -58,6 +58,15 @@ def prepender(string_list, prefix):
     :precondition: prefix must be a string
     :postcondition: add prefix to all strings in a list
     :return: a list
+
+    >>> prepender([], "")
+    []
+    >>> prepender([], "Python")
+    []
+    >>> prepender(["Python"], "")
+    ['Python']
+    >>> prepender(["Python"], "I love ")
+    ['I love Python']
     """
     if string_list == []:
         string_list = []

@@ -53,3 +53,25 @@ def prepender(string_list, prefix):
     for i in range(0, len(string_list)):
         string_list[i] = prefix + string_list[i]
 
+
+def name_list():
+    """
+    Create a dictionary to store lengths of names.
+
+    :return: a dictionary
+    """
+    user_input = ""
+    names = {}
+
+    while user_input.lower() != "quit":
+        user_input = input("Type a name (Type \"quit\" to exit): ")
+        if user_input.lower() == "quit":
+            break
+        else:
+            if len(user_input) not in names.keys():
+                names[len(user_input)] = [user_input]
+            else:
+                names[len(user_input)].append(user_input)
+
+    return names
+

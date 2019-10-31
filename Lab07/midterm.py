@@ -57,9 +57,15 @@ def prepender(string_list, prefix):
     :precondition: string_list must be a list of strings
     :precondition: prefix must be a string
     :postcondition: add prefix to all strings in a list
+    :return: a list
     """
-    for i in range(0, len(string_list)):
-        string_list[i] = prefix + string_list[i]
+    if string_list == []:
+        string_list = []
+    else:
+        for i in range(0, len(string_list)):
+            string_list[i] = prefix + string_list[i]
+
+    return string_list
 
 
 def name_list():

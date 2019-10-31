@@ -32,3 +32,8 @@ class TestPrepender(TestCase):
         actual = prepender(["Python", "is", "better", "than", "JavaScript"], "Umm... ")
         expected = ['Umm... Python', 'Umm... is', 'Umm... better', 'Umm... than', 'Umm... JavaScript']
         self.assertEqual(expected, actual)
+
+
+"""
+I would also write test for empty strings in the list.
+"""

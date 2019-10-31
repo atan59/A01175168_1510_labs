@@ -57,3 +57,8 @@ class TestCutoff(TestCase):
         actual = cutoff([3, 6, 9, 12, 15], 3)
         expected = 5
         self.assertEqual(expected, actual)
+
+
+"""
+I would also write multiple tests with negative numbers in the list.
+"""

@@ -75,3 +75,21 @@ def name_list():
 
     return names
 
+
+def multiples_of_3(upper_bound):
+    """
+    Calculate sum of multiples of 3 in a range from 1 to upper_bound.
+
+    :param upper_bound: an int
+    :precondition: upper_bound must be a positive int greater than 1
+    :postcondition: calculate the sum of the multiples of 3 in a range from 1 to upper_bound
+    :return: an int
+    """
+    positive_integers = range(1, upper_bound)
+    sum_of_multiples = 0
+    for num in positive_integers:
+        if num % 3 == 0:
+            sum_of_multiples += num
+
+    return sum_of_multiples
+

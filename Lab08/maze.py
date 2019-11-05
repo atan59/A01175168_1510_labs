@@ -46,7 +46,23 @@ def get_user_choice():
 
 
 def validate_move(board, character, direction):
-    pass
+    """
+    Check if move is valid.
+
+    :param board: a list
+    :param character: a dictionary
+    :param direction: a string
+    :precondition: board must be a list of tuples
+    :precondition: character must be a dictionary with a key "Current Position"
+    :precondition: direction must be a string
+    :postcondition: check if move is valid within the board
+    :return: a boolean
+
+    >>> validate_move([(0, 0), (0, 1), (1, 0), (1, 1)], {"Current Position": (0, 0)}, "2")
+    True
+    >>> validate_move([(0, 0), (0, 1), (1, 0), (1, 1)], {"Current Position": (0, 0)}, "1")
+    False
+    """
 
 
 def move_character(character, direction):

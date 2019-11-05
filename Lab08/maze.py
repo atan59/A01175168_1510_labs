@@ -63,6 +63,19 @@ def validate_move(board, character, direction):
     >>> validate_move([(0, 0), (0, 1), (1, 0), (1, 1)], {"Current Position": (0, 0)}, "1")
     False
     """
+    if direction == "1":
+        move = (character["Current Position"][0], character["Current Position"][1] - 1)
+    elif direction == "2":
+        move = (character["Current Position"][0] + 1, character["Current Position"][1])
+    elif direction == "3":
+        move = (character["Current Position"][0], character["Current Position"][1] + 1)
+    elif direction == "4":
+        move = (character["Current Position"][0] - 1, character["Current Position"][1])
+    if move in board:
+        result = True
+    else:
+        result = False
+    return result
 
 
 def move_character(character, direction):

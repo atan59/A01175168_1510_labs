@@ -170,5 +170,5 @@ def game():
 
 
 if __name__ == "__main__":
-    # doctest.testmod()
-    # game()
+    doctest.testmod()
+    game()

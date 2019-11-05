@@ -128,7 +128,19 @@ def move_character(character, direction):
 
 
 def check_if_exit_reached(character):
-    pass
+    """
+    Check if character has reached the end.
+
+    :param character: a dictionary
+    :precondition: character must be a dictionary with a key "Current Position"
+    :postcondition: check if character is at the end coordinate
+    :return: a boolean
+
+    >>> check_if_exit_reached({"Current Position": (4, 4)})
+    True
+    >>> check_if_exit_reached({"Current Position": (0, 0)})
+    False
+    """
 
 
 def game():

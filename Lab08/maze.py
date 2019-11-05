@@ -109,6 +109,22 @@ def move_character(character, direction):
     *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
     <BLANKLINE>
     """
+    if direction == "1":
+        character["Current Position"] = (character["Current Position"][0], character["Current Position"][1] - 1)
+        print("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + "Your current position (x, y) is: " +
+              str(character["Current Position"]) + "\n" + "*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n")
+    elif direction == "2":
+        character["Current Position"] = (character["Current Position"][0] + 1, character["Current Position"][1])
+        print("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + "Your current position (x, y) is: " +
+              str(character["Current Position"]) + "\n" + "*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n")
+    elif direction == "3":
+        character["Current Position"] = (character["Current Position"][0], character["Current Position"][1] + 1)
+        print("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + "Your current position (x, y) is: " +
+              str(character["Current Position"]) + "\n" + "*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n")
+    elif direction == "4":
+        character["Current Position"] = (character["Current Position"][0] - 1, character["Current Position"][1])
+        print("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + "Your current position (x, y) is: " +
+              str(character["Current Position"]) + "\n" + "*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n")
 
 
 def check_if_exit_reached(character):

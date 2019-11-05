@@ -149,7 +149,9 @@ def check_if_exit_reached(character):
 
 
 def game():
-    pass
+    """
+    Run the game.
+    """
 
 
 if __name__ == "__main__":

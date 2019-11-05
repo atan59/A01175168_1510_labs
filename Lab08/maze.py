@@ -26,7 +26,11 @@ def make_character():
 
 
 def get_user_choice():
-    pass
+    """
+    Get user direction choice.
+
+    :return: a string
+    """
 
 
 def validate_move(board, character, direction):

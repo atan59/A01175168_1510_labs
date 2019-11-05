@@ -8,6 +8,11 @@ def make_board():
 
     :return: a list
     """
+    board = []
+    for i in range(0, 5):
+        for j in range(0, 5):
+            board.append((i, j))
+    return board
 
 
 def make_character():

@@ -31,6 +31,18 @@ def get_user_choice():
 
     :return: a string
     """
+    choice = input("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + "Which direction would you like to go?\n" +
+                   "*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + "1. North\n" + "2. East\n" + "3. South\n" +
+                   "4. West\n" + "*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + "Please type number from 1 - 4\n" +
+                   "*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + "Choice: ")
+    while int(choice) < 1 or int(choice) > 4:
+        print("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + "That's not a valid choice!\n" +
+              "Please input your choice again.\n" + "*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n")
+        choice = input("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + "Which direction would you like to go?\n" +
+                       "*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + "1. North\n" + "2. East\n" + "3. South\n" +
+                       "4. West\n" + "*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" +
+                       "Please type number from 1 - 4\n" + "*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + "Choice: ")
+    return choice
 
 
 def validate_move(board, character, direction):

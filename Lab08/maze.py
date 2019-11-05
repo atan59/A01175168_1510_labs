@@ -3,7 +3,11 @@ import doctest
 
 
 def make_board():
-    pass
+    """
+    Create a 5x5 game board.
+
+    :return: a list
+    """
 
 
 def make_character():

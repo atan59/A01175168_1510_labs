@@ -141,6 +141,11 @@ def check_if_exit_reached(character):
     >>> check_if_exit_reached({"Current Position": (0, 0)})
     False
     """
+    if character["Current Position"] == (4, 4):
+        result = True
+    else:
+        result = False
+    return result
 
 
 def game():

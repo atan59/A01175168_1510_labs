@@ -21,6 +21,8 @@ def make_character():
 
     :return: a dictionary
     """
+    character = {"Current Position": (0, 0)}
+    return character
 
 
 def get_user_choice():

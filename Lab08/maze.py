@@ -16,7 +16,11 @@ def make_board():
 
 
 def make_character():
-    pass
+    """
+    Create a character.
+
+    :return: a dictionary
+    """
 
 
 def get_user_choice():

@@ -152,6 +152,21 @@ def game():
     """
     Run the game.
     """
+    board = make_board()
+    character = make_character()
+    found_exit = False
+    while not found_exit:
+        direction = get_user_choice()
+        valid_move = validate_move(board, character, direction)
+        if valid_move:
+            move_character(character, direction)
+            found_exit = check_if_exit_reached(character)
+            if found_exit:
+                print("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + "Congratulations!\n" +
+                      "You have made it to the end of the maze!\n" + "*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n")
+        else:
+            print("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + "You can't move here!\n" + "Please try again!\n" +
+                  "*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n")
 
 
 if __name__ == "__main__":

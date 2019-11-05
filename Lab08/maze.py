@@ -79,7 +79,36 @@ def validate_move(board, character, direction):
 
 
 def move_character(character, direction):
-    pass
+    """
+    Move a character one step.
+
+    :param character: a dictionary
+    :param direction: a string
+    :precondition: character must be a dictionary with a key "Current Position"
+    :precondition: direction must be a string
+    :postcondition: move character one step in specified direction
+
+    >>> move_character({"Current Position": (0, 1)}, "1")
+    *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+    Your current position (x, y) is: (0, 0)
+    *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+    <BLANKLINE>
+    >>> move_character({"Current Position": (0, 0)}, "2")
+    *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+    Your current position (x, y) is: (1, 0)
+    *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+    <BLANKLINE>
+    >>> move_character({"Current Position": (0, 0)}, "3")
+    *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+    Your current position (x, y) is: (0, 1)
+    *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+    <BLANKLINE>
+    >>> move_character({"Current Position": (1, 0)}, "4")
+    *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+    Your current position (x, y) is: (0, 0)
+    *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+    <BLANKLINE>
+    """
 
 
 def check_if_exit_reached(character):

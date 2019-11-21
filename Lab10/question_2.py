@@ -17,9 +17,10 @@ def gcd(a: int, b: int) -> int:
     2
     >>> gcd(2, 4)
     2
-    >>> gcd(2, 0)
-    2
     """
+    if a == 0 or b == 0:
+        raise ValueError('Zero is not a valid integer.')
+
     while b != 0:
         (a, b) = (b, a % b)
     return a

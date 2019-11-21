@@ -10,6 +10,7 @@ def gcd(a: int, b: int) -> int:
     :param b: an int
     :precondition: a must be a non-zero int
     :precondition: b must be a non-zero int
+    :postcondition: if a or b are zero, will raise ValueError
     :postcondition: calculate the greatest common denominator
     :return: an int
 

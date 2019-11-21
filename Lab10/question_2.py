@@ -17,6 +17,10 @@ def gcd(a: int, b: int) -> int:
     2
     >>> gcd(2, 4)
     2
+    >>> gcd(-4, 2)
+    2
+    >>> gcd(4, -2)
+    -2
     """
     if a == 0 or b == 0:
         raise ValueError('Zero is not a valid integer.')

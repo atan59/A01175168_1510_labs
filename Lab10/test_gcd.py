@@ -32,3 +32,11 @@ class TestGcd(TestCase):
         expected = -2
         actual = gcd(-4, -2)
         self.assertEqual(expected, actual)
+
+    def test_gcd_a_equal_to_zero(self):
+        with self.assertRaises(ValueError):
+            gcd(0, 2)
+
+    def test_gcd_b_equal_to_zero(self):
+        with self.assertRaises(ValueError):
+            gcd(2, 0)

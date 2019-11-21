@@ -8,8 +8,8 @@ def gcd(a: int, b: int) -> int:
 
     :param a: an int
     :param b: an int
-    :precondition: a must be an int
-    :precondition: b must be an int
+    :precondition: a must be a non-zero int
+    :precondition: b must be a non-zero int
     :postcondition: calculate the greatest common denominator
     :return: an int
 
